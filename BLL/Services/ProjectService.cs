@@ -155,10 +155,16 @@ namespace BLL.Services
             await _projectRepository.SaveChangesAsync();
         }
 
-        public async Task<byte[]> ExportProjectDataAsync(int projectId)
+        public async Task<byte[]> ExportProjectDataAsync(int projectId, string userId)
         {
             var project = await _projectRepository.GetProjectForExportAsync(projectId);
             if (project == null) throw new Exception("Project not found");
+
+            var user = await _userRepository.GetByIdAsync(userId);
+            if (user == null) throw new Exception("User not found");
+
+            if (user.Role != UserRoles.Admin && project.ManagerId != userId)
+                throw new Exception("Unauthorized to export this project.");
 
             var dataItems = project.DataItems
                 .Where(d => d.Status == "Done")

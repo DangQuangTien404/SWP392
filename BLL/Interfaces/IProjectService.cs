@@ -17,6 +17,6 @@ namespace BLL.Interfaces
 
         Task UpdateProjectAsync(int projectId, UpdateProjectRequest request);
         Task DeleteProjectAsync(int projectId);
-        Task<byte[]> ExportProjectDataAsync(int projectId);
+        Task<byte[]> ExportProjectDataAsync(int projectId, string userId);
     }
 }
