@@ -79,7 +79,6 @@ namespace Fit3d.BLL.Services
             var entity = await _repository.GetByIdAsync(id);
             if (entity == null || entity.IsDeleted) return null;
 
-            // Check email uniqueness if changed
             if (entity.Email != updateDto.Email)
             {
                 var existing = await _repository.SingleOrDefaultAsync(x => x.Email == updateDto.Email && x.Id != id && !x.IsDeleted);
