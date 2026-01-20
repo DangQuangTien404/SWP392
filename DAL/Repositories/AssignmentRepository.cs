@@ -1,5 +1,6 @@
 ﻿using DAL.Interfaces;
 using DTOs.Entities;
+using DTOs.Responses;
 using Microsoft.EntityFrameworkCore;
 
 namespace DAL.Repositories
@@ -60,6 +61,24 @@ namespace DAL.Repositories
                 .Where(d => d.ProjectId == projectId && d.Status == "New")
                 .Take(quantity)
                 .ToListAsync();
+        }
+
+        public async Task<AnnotatorStatsResponse> GetAnnotatorStatsAsync(string annotatorId)
+        {
+            var stats = await _context.Assignments
+                .Where(a => a.AnnotatorId == annotatorId)
+                .GroupBy(a => 1)
+                .Select(g => new AnnotatorStatsResponse
+                {
+                    TotalAssigned = g.Count(),
+                    Pending = g.Count(x => x.Status == "Assigned" || x.Status == "InProgress"),
+                    Submitted = g.Count(x => x.Status == "Submitted"),
+                    Rejected = g.Count(x => x.Status == "Rejected"),
+                    Completed = g.Count(x => x.Status == "Completed")
+                })
+                .FirstOrDefaultAsync();
+
+            return stats ?? new AnnotatorStatsResponse();
         }
     }
 }

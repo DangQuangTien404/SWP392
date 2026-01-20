@@ -81,7 +81,8 @@ namespace BLL.Services
                 Status = a.Status,
                 RejectReason = (a.Status == "Rejected")
                     ? a.ReviewLogs.OrderByDescending(r => r.CreatedAt).FirstOrDefault()?.Comment
-                    : null
+                    : null,
+                Deadline = a.Project.Deadline
             }).ToList();
         }
 
@@ -132,16 +133,7 @@ namespace BLL.Services
 
         public async Task<AnnotatorStatsResponse> GetAnnotatorStatsAsync(string annotatorId)
         {
-            var tasks = await _assignmentRepo.GetAssignmentsByAnnotatorAsync(annotatorId, 0);
-
-            return new AnnotatorStatsResponse
-            {
-                TotalAssigned = tasks.Count,
-                Pending = tasks.Count(t => t.Status == "Assigned" || t.Status == "InProgress"),
-                Submitted = tasks.Count(t => t.Status == "Submitted"),
-                Rejected = tasks.Count(t => t.Status == "Rejected"),
-                Completed = tasks.Count(t => t.Status == "Completed")
-            };
+            return await _assignmentRepo.GetAnnotatorStatsAsync(annotatorId);
         }
 
         public async Task SubmitTaskAsync(string annotatorId, SubmitAnnotationRequest request)

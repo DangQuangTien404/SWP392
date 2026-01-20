@@ -1,4 +1,5 @@
 using DTOs.Entities;
+using DTOs.Responses;
 
 namespace DAL.Interfaces
 {
@@ -8,5 +9,6 @@ namespace DAL.Interfaces
         Task<List<Assignment>> GetAssignmentsForReviewerAsync(int projectId);
         Task<Assignment?> GetAssignmentWithDetailsAsync(int id);
         Task<List<DataItem>> GetUnassignedDataItemsAsync(int projectId, int quantity);
+        Task<AnnotatorStatsResponse> GetAnnotatorStatsAsync(string annotatorId);
     }
 }
