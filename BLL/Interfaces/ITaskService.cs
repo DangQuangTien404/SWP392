@@ -6,7 +6,7 @@ namespace BLL.Interfaces
     public interface ITaskService
     {
         Task AssignTasksToAnnotatorAsync(AssignTaskRequest request);
-        Task<List<TaskResponse>> GetMyTasksAsync(int projectId, string annotatorId);
+        Task<List<TaskResponse>> GetMyTasksAsync(int projectId, string annotatorId, string? status = null);
         Task<TaskResponse?> GetTaskDetailAsync(int assignmentId, string annotatorId);
 
         Task SubmitTaskAsync(string annotatorId, SubmitAnnotationRequest request);

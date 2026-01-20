@@ -69,16 +69,19 @@ namespace BLL.Services
             await _assignmentRepo.SaveChangesAsync();
         }
 
-        public async Task<List<TaskResponse>> GetMyTasksAsync(int projectId, string annotatorId)
+        public async Task<List<TaskResponse>> GetMyTasksAsync(int projectId, string annotatorId, string? status = null)
         {
-            var assignments = await _assignmentRepo.GetAssignmentsByAnnotatorAsync(projectId, annotatorId);
+            var assignments = await _assignmentRepo.GetAssignmentsByAnnotatorAsync(annotatorId, projectId, status);
 
             return assignments.Select(a => new TaskResponse
             {
                 AssignmentId = a.Id,
                 DataItemId = a.DataItemId,
                 StorageUrl = a.DataItem?.StorageUrl ?? "",
-                Status = a.Status
+                Status = a.Status,
+                RejectReason = (a.Status == "Rejected")
+                    ? a.ReviewLogs.OrderByDescending(r => r.CreatedAt).FirstOrDefault()?.Comment
+                    : null
             }).ToList();
         }
 
@@ -129,7 +132,7 @@ namespace BLL.Services
 
         public async Task<AnnotatorStatsResponse> GetAnnotatorStatsAsync(string annotatorId)
         {
-            var tasks = await _assignmentRepo.GetAssignmentsByAnnotatorAsync(0, annotatorId);
+            var tasks = await _assignmentRepo.GetAssignmentsByAnnotatorAsync(annotatorId, 0);
 
             return new AnnotatorStatsResponse
             {

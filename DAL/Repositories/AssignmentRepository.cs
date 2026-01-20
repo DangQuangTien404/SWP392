@@ -13,16 +13,22 @@ namespace DAL.Repositories
             _context = context;
         }
 
-        public async Task<List<Assignment>> GetAssignmentsByAnnotatorAsync(int projectId, string annotatorId)
+        public async Task<List<Assignment>> GetAssignmentsByAnnotatorAsync(string annotatorId, int projectId = 0, string? status = null)
         {
             var query = _context.Assignments
-                .Include(a => a.DataItem) 
+                .Include(a => a.DataItem)
                 .Include(a => a.Project)
+                .Include(a => a.ReviewLogs)
                 .Where(a => a.AnnotatorId == annotatorId);
 
             if (projectId > 0)
             {
                 query = query.Where(a => a.ProjectId == projectId);
+            }
+
+            if (!string.IsNullOrEmpty(status))
+            {
+                query = query.Where(a => a.Status == status);
             }
 
             return await query.OrderByDescending(a => a.AssignedDate).ToListAsync();

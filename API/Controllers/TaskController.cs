@@ -40,13 +40,13 @@ namespace API.Controllers
             return Ok(stats);
         }
 
-        [HttpGet("my-tasks/{projectId}")]
-        public async Task<IActionResult> GetMyTasks(int projectId)
+        [HttpGet("my-tasks")]
+        public async Task<IActionResult> GetMyTasks([FromQuery] int projectId = 0, [FromQuery] string? status = null)
         {
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             if (string.IsNullOrEmpty(userId)) return Unauthorized();
 
-            var tasks = await _taskService.GetMyTasksAsync(projectId, userId);
+            var tasks = await _taskService.GetMyTasksAsync(projectId, userId, status);
             return Ok(tasks);
         }
 
