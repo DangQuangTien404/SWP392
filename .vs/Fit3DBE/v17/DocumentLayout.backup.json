@@ -1,0 +1,190 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\test\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E067959C-F13C-4634-809C-541D1F926CBA}|FIt3d.DAL\\FIt3d.DAL.csproj|d:\\test\\fit3d.dal\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E067959C-F13C-4634-809C-541D1F926CBA}|FIt3d.DAL\\FIt3d.DAL.csproj|solutionrelative:fit3d.dal\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB27A9C6-EE05-4230-A16E-0E4519ACAEB5}|Fit3d.API\\Fit3d.API.csproj|d:\\test\\fit3d.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB27A9C6-EE05-4230-A16E-0E4519ACAEB5}|Fit3d.API\\Fit3d.API.csproj|solutionrelative:fit3d.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB27A9C6-EE05-4230-A16E-0E4519ACAEB5}|Fit3d.API\\Fit3d.API.csproj|d:\\test\\fit3d.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BB27A9C6-EE05-4230-A16E-0E4519ACAEB5}|Fit3d.API\\Fit3d.API.csproj|solutionrelative:fit3d.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB27A9C6-EE05-4230-A16E-0E4519ACAEB5}|Fit3d.API\\Fit3d.API.csproj|d:\\test\\fit3d.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BB27A9C6-EE05-4230-A16E-0E4519ACAEB5}|Fit3d.API\\Fit3d.API.csproj|solutionrelative:fit3d.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB27A9C6-EE05-4230-A16E-0E4519ACAEB5}|Fit3d.API\\Fit3d.API.csproj|d:\\test\\fit3d.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BB27A9C6-EE05-4230-A16E-0E4519ACAEB5}|Fit3d.API\\Fit3d.API.csproj|solutionrelative:fit3d.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B51A4DFD-C019-4494-B813-3F0F27A26E32}|Fit3d.BLL\\Fit3d.BLL.csproj|d:\\test\\fit3d.bll\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B51A4DFD-C019-4494-B813-3F0F27A26E32}|Fit3d.BLL\\Fit3d.BLL.csproj|solutionrelative:fit3d.bll\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B51A4DFD-C019-4494-B813-3F0F27A26E32}|Fit3d.BLL\\Fit3d.BLL.csproj|d:\\test\\fit3d.bll\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B51A4DFD-C019-4494-B813-3F0F27A26E32}|Fit3d.BLL\\Fit3d.BLL.csproj|solutionrelative:fit3d.bll\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B51A4DFD-C019-4494-B813-3F0F27A26E32}|Fit3d.BLL\\Fit3d.BLL.csproj|d:\\test\\fit3d.bll\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B51A4DFD-C019-4494-B813-3F0F27A26E32}|Fit3d.BLL\\Fit3d.BLL.csproj|solutionrelative:fit3d.bll\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B51A4DFD-C019-4494-B813-3F0F27A26E32}|Fit3d.BLL\\Fit3d.BLL.csproj|d:\\test\\fit3d.bll\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B51A4DFD-C019-4494-B813-3F0F27A26E32}|Fit3d.BLL\\Fit3d.BLL.csproj|solutionrelative:fit3d.bll\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B51A4DFD-C019-4494-B813-3F0F27A26E32}|Fit3d.BLL\\Fit3d.BLL.csproj|d:\\test\\fit3d.bll\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B51A4DFD-C019-4494-B813-3F0F27A26E32}|Fit3d.BLL\\Fit3d.BLL.csproj|solutionrelative:fit3d.bll\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\test\\FIt3d.DAL\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "FIt3d.DAL\\Entities\\User.cs",
+              "ToolTip": "D:\\test\\FIt3d.DAL\\Entities\\User.cs",
+              "RelativeToolTip": "FIt3d.DAL\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T13:10:21.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\test\\Fit3d.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Fit3d.API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\test\\Fit3d.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Fit3d.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAiwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-18T13:06:26.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\test\\Fit3d.API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Fit3d.API\\appsettings.Development.json",
+              "ToolTip": "D:\\test\\Fit3d.API\\appsettings.Development.json",
+              "RelativeToolTip": "Fit3d.API\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-18T13:06:19.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\test\\Fit3d.API\\Program.cs",
+              "RelativeDocumentMoniker": "Fit3d.API\\Program.cs",
+              "ToolTip": "D:\\test\\Fit3d.API\\Program.cs",
+              "RelativeToolTip": "Fit3d.API\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T13:06:08.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\test\\Fit3d.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Fit3d.API\\appsettings.json",
+              "ToolTip": "D:\\test\\Fit3d.API\\appsettings.json",
+              "RelativeToolTip": "Fit3d.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-18T13:06:02.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "D:\\test\\Fit3d.BLL\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "Fit3d.BLL\\Services\\ProductService.cs",
+              "ToolTip": "D:\\test\\Fit3d.BLL\\Services\\ProductService.cs",
+              "RelativeToolTip": "Fit3d.BLL\\Services\\ProductService.cs",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAApwKYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T12:51:58.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "D:\\test\\Fit3d.BLL\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "Fit3d.BLL\\Services\\OrderService.cs",
+              "ToolTip": "D:\\test\\Fit3d.BLL\\Services\\OrderService.cs",
+              "RelativeToolTip": "Fit3d.BLL\\Services\\OrderService.cs",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAYwKMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T12:51:50.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\test\\Fit3d.BLL\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Fit3d.BLL\\Services\\UserService.cs",
+              "ToolTip": "D:\\test\\Fit3d.BLL\\Services\\UserService.cs",
+              "RelativeToolTip": "Fit3d.BLL\\Services\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T12:51:47.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "D:\\test\\Fit3d.BLL\\Services\\CategoryService.cs",
+              "RelativeDocumentMoniker": "Fit3d.BLL\\Services\\CategoryService.cs",
+              "ToolTip": "D:\\test\\Fit3d.BLL\\Services\\CategoryService.cs",
+              "RelativeToolTip": "Fit3d.BLL\\Services\\CategoryService.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAvwE8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T12:51:39.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "D:\\test\\Fit3d.BLL\\Services\\CartService.cs",
+              "RelativeDocumentMoniker": "Fit3d.BLL\\Services\\CartService.cs",
+              "ToolTip": "D:\\test\\Fit3d.BLL\\Services\\CartService.cs",
+              "RelativeToolTip": "Fit3d.BLL\\Services\\CartService.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAApwDkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-18T12:51:36.043Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
