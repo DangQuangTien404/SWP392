@@ -1,5 +1,6 @@
 ﻿using BLL.Interfaces;
 using DAL.Interfaces;
+using DTOs.Constants;
 using DTOs.Entities;
 using DTOs.Requests;
 using DTOs.Responses;
@@ -51,13 +52,27 @@ namespace BLL.Services
                 };
                 await _statsRepo.AddAsync(stats);
             }
+
+            if (!request.IsApproved)
+            {
+                if (string.IsNullOrEmpty(request.ErrorCategory) || !ErrorCategories.IsValid(request.ErrorCategory))
+                {
+                    throw new Exception($"Invalid Error Category. Allowed values are: {string.Join(", ", ErrorCategories.All)}");
+                }
+
+                if (request.ErrorCategory == ErrorCategories.Other && string.IsNullOrWhiteSpace(request.Comment))
+                {
+                    throw new Exception("Comment is required when Error Category is 'Other'.");
+                }
+            }
+
             var log = new ReviewLog
             {
                 AssignmentId = assignment.Id,
                 ReviewerId = reviewerId,
                 Decision = request.IsApproved ? "Approve" : "Reject",
                 Comment = request.Comment,
-                ErrorCategory = request.ErrorCategory,
+                ErrorCategory = request.IsApproved ? null : request.ErrorCategory,
                 CreatedAt = DateTime.UtcNow
             };
             await _reviewLogRepo.AddAsync(log);

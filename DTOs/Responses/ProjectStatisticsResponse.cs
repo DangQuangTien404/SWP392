@@ -72,6 +72,17 @@ namespace DTOs.Responses
         public decimal CostIncurred { get; set; }
 
         /// <summary>
+        /// The rejection rate percentage based on review history.
+        /// </summary>
+        /// <example>15.5</example>
+        public double RejectionRate { get; set; }
+
+        /// <summary>
+        /// Breakdown of error types from rejected reviews.
+        /// </summary>
+        public Dictionary<string, int> ErrorBreakdown { get; set; } = new();
+
+        /// <summary>
         /// Performance statistics for each annotator on the project.
         /// </summary>
         public List<AnnotatorPerformance> AnnotatorPerformances { get; set; } = new();

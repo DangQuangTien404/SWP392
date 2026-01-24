@@ -294,6 +294,10 @@ namespace BLL.Services
 
             var allAssignments = project.DataItems.SelectMany(d => d.Assignments).ToList();
 
+            var allReviewLogs = allAssignments.SelectMany(a => a.ReviewLogs).ToList();
+            var totalReviewed = allReviewLogs.Count;
+            var totalRejectedLogs = allReviewLogs.Count(l => l.Decision == "Reject");
+
             var stats = new ProjectStatisticsResponse
             {
                 ProjectId = project.Id,
@@ -305,7 +309,13 @@ namespace BLL.Services
                 PendingAssignments = allAssignments.Count(a => a.Status == "Assigned" || a.Status == "InProgress"),
                 SubmittedAssignments = allAssignments.Count(a => a.Status == "Submitted"),
                 ApprovedAssignments = allAssignments.Count(a => a.Status == "Completed"),
-                RejectedAssignments = allAssignments.Count(a => a.Status == "Rejected")
+                RejectedAssignments = allAssignments.Count(a => a.Status == "Rejected"),
+
+                RejectionRate = totalReviewed > 0 ? Math.Round((double)totalRejectedLogs / totalReviewed * 100, 2) : 0,
+                ErrorBreakdown = allReviewLogs
+                    .Where(l => l.Decision == "Reject" && !string.IsNullOrEmpty(l.ErrorCategory) && ErrorCategories.IsValid(l.ErrorCategory))
+                    .GroupBy(l => l.ErrorCategory!)
+                    .ToDictionary(g => g.Key, g => g.Count())
             };
 
             if (stats.TotalItems > 0)
