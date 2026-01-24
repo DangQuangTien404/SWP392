@@ -91,14 +91,10 @@ namespace Fit3d.BLL.Services
             {
                 var product = await _productRepository.GetByIdAsync(itemDto.ProductId);
                 if (product == null || product.IsDeleted) throw new ArgumentException($"Product {itemDto.ProductId} not found");
-
-                // Check stock logic could be added here
                 if (product.StockQuantity < itemDto.Quantity)
                 {
                     throw new InvalidOperationException($"Insufficient stock for product {product.Name}");
                 }
-
-                // Decrease stock
                 product.StockQuantity -= itemDto.Quantity;
                 _productRepository.UpdateAsync(product);
 
@@ -126,8 +122,6 @@ namespace Fit3d.BLL.Services
 
             await _orderRepository.InsertAsync(order);
             await _unitOfWork.SaveChangesAsync();
-
-            // Re-fetch with includes for DTO
             return (await GetByIdAsync(order.Id))!;
         }
 
@@ -154,15 +148,23 @@ namespace Fit3d.BLL.Services
         {
             var entity = await _orderRepository.GetByIdAsync(id);
             if (entity == null || entity.IsDeleted) return false;
-
-            // Maybe restore stock if cancelled?
-            // For now just soft delete.
-
             entity.IsDeleted = true;
             entity.UpdatedAt = DateTime.UtcNow;
             _orderRepository.UpdateAsync(entity);
             await _unitOfWork.SaveChangesAsync();
             return true;
+        }
+
+        public async Task<bool> HasUserPurchasedProductAsync(Guid userId, Guid productId)
+        {
+            var query = _orderRepository.GetQueryable(
+                predicate: x => x.UserId == userId
+                                && !x.IsDeleted                             
+                                && (x.PaymentStatus == PaymentStatus.Paid || x.Status == OrderStatus.Delivered),
+                include: x => x.Include(o => o.OrderItems)
+            );
+
+            return await query.AnyAsync(o => o.OrderItems.Any(oi => oi.ProductId == productId));
         }
 
         private static OrderDTO ToDTO(Order entity)

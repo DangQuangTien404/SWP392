@@ -1,7 +1,9 @@
-using System;
+﻿using System;
+using System.IO;
 using System.Threading.Tasks;
 using Fit3d.BLL.DTOs;
 using Fit3d.BLL.Interfaces;
+using Fit3d.BLL.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Fit3d.API.Controllers
@@ -11,24 +13,29 @@ namespace Fit3d.API.Controllers
     public class ProductController : ControllerBase
     {
         private readonly IProductService _service;
+        private readonly IOrderService _orderService;
+        private readonly IFileService _fileService;
 
-        public ProductController(IProductService service)
+        public ProductController(
+            IProductService service,
+            IOrderService orderService,
+            IFileService fileService)
         {
             _service = service;
+            _orderService = orderService;
+            _fileService = fileService;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetPaging([FromQuery] int page = 1, [FromQuery] int size = 10, [FromQuery] string? search = null, [FromQuery] Guid? categoryId = null)
         {
-            var result = await _service.GetPagingAsync(page, size, search, categoryId);
-            return Ok(result);
+            return Ok(await _service.GetPagingAsync(page, size, search, categoryId));
         }
 
         [HttpGet("all")]
         public async Task<IActionResult> GetAll()
         {
-            var result = await _service.GetAllAsync();
-            return Ok(result);
+            return Ok(await _service.GetAllAsync());
         }
 
         [HttpGet("{id}")]
@@ -40,7 +47,7 @@ namespace Fit3d.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateProductDTO createDto)
+        public async Task<IActionResult> Create([FromForm] CreateProductDTO createDto)
         {
             var result = await _service.CreateAsync(createDto);
             return CreatedAtAction(nameof(GetById), new { id = result.Id }, result);
@@ -57,43 +64,54 @@ namespace Fit3d.API.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
-            var result = await _service.DeleteAsync(id);
-            if (!result) return NotFound();
+            if (!await _service.DeleteAsync(id)) return NotFound();
             return NoContent();
         }
 
-        // Sub-resources endpoints
+        [HttpGet("{id}/download")]
+        public async Task<IActionResult> DownloadModel(Guid id, [FromQuery] Guid userId)
+        {
+            var product = await _service.GetByIdAsync(id);
+            if (product == null) return NotFound("Sản phẩm không tồn tại.");
+            bool hasPurchased = await _orderService.HasUserPurchasedProductAsync(userId, id);
+            if (!hasPurchased)
+            {
+                return StatusCode(403, "Bạn chưa mua sản phẩm này hoặc đơn hàng chưa thanh toán.");
+            }
+            if (string.IsNullOrEmpty(product.ModelFilePath))
+            {
+                return NotFound("Sản phẩm này chưa có file gốc để tải.");
+            }
+            var fileStream = _fileService.GetFileStream(product.ModelFilePath);
+            if (fileStream == null) return NotFound("File bị lỗi hoặc đã bị xóa trên server.");
+            string fileName = Path.GetFileName(product.ModelFilePath);
+            return File(fileStream, "application/octet-stream", fileName);
+        }
 
         [HttpPost("{id}/colors")]
         public async Task<IActionResult> AddColor(Guid id, [FromBody] CreateProductColorDTO colorDto)
         {
             var result = await _service.AddColorAsync(id, colorDto);
-            if (result == null) return BadRequest("Could not add color. Product might not exist.");
-            return Ok(result);
+            return result != null ? Ok(result) : BadRequest();
         }
 
         [HttpDelete("colors/{colorId}")]
         public async Task<IActionResult> DeleteColor(Guid colorId)
         {
-            var result = await _service.DeleteColorAsync(colorId);
-            if (!result) return NotFound();
-            return NoContent();
+            return await _service.DeleteColorAsync(colorId) ? NoContent() : NotFound();
         }
 
         [HttpPost("{id}/sizes")]
         public async Task<IActionResult> AddSize(Guid id, [FromBody] CreateProductSizeDTO sizeDto)
         {
             var result = await _service.AddSizeAsync(id, sizeDto);
-            if (result == null) return BadRequest("Could not add size. Product might not exist.");
-            return Ok(result);
+            return result != null ? Ok(result) : BadRequest();
         }
 
         [HttpDelete("sizes/{sizeId}")]
         public async Task<IActionResult> DeleteSize(Guid sizeId)
         {
-            var result = await _service.DeleteSizeAsync(sizeId);
-            if (!result) return NotFound();
-            return NoContent();
+            return await _service.DeleteSizeAsync(sizeId) ? NoContent() : NotFound();
         }
     }
 }

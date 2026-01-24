@@ -21,4 +21,8 @@
     <ProjectReference Include="..\FIt3d.DAL\FIt3d.DAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
 </Project>

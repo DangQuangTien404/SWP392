@@ -18,19 +18,22 @@ namespace Fit3d.BLL.Services
         private readonly IGenericRepository<ProductSize> _sizeRepository;
         private readonly IGenericRepository<Category> _categoryRepository;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IFileService _fileService;
 
         public ProductService(
             IGenericRepository<Product> productRepository,
             IGenericRepository<ProductColor> colorRepository,
             IGenericRepository<ProductSize> sizeRepository,
             IGenericRepository<Category> categoryRepository,
-            IUnitOfWork unitOfWork)
+            IUnitOfWork unitOfWork,
+            IFileService fileService)
         {
             _productRepository = productRepository;
             _colorRepository = colorRepository;
             _sizeRepository = sizeRepository;
             _categoryRepository = categoryRepository;
             _unitOfWork = unitOfWork;
+            _fileService = fileService;
         }
 
         public async Task<ICollection<ProductDTO>> GetAllAsync()
@@ -68,6 +71,9 @@ namespace Fit3d.BLL.Services
 
         public async Task<ProductDTO> CreateAsync(CreateProductDTO createDto)
         {
+            string? modelPath = await _fileService.SaveFileAsync(createDto.ModelFile, "source-models");
+            string? previewPath = await _fileService.SaveFileAsync(createDto.PreviewFile, "preview-models");
+
             var entity = new Product
             {
                 Id = Guid.NewGuid(),
@@ -78,6 +84,9 @@ namespace Fit3d.BLL.Services
                 SKU = createDto.SKU,
                 Brand = createDto.Brand,
                 ImageUrl = createDto.ImageUrl,
+                ModelFilePath = modelPath,
+                PreviewModelPath = previewPath,
+
                 StockQuantity = createDto.StockQuantity,
                 IsActive = createDto.IsActive,
                 IsFeatured = createDto.IsFeatured,
@@ -112,9 +121,6 @@ namespace Fit3d.BLL.Services
             await _productRepository.InsertAsync(entity);
             await _unitOfWork.SaveChangesAsync();
 
-            // Fetch again to get Category name if needed, or just construct DTO
-            // For simplicity, constructing DTO, but CategoryName might be missing.
-            // Let's fetch the category to be nice
             var category = await _categoryRepository.GetByIdAsync(entity.CategoryId);
             if (category != null) entity.Category = category;
 
@@ -146,11 +152,10 @@ namespace Fit3d.BLL.Services
             _productRepository.UpdateAsync(entity);
             await _unitOfWork.SaveChangesAsync();
 
-            // Refresh category reference if changed
             if (entity.Category == null || entity.CategoryId != entity.Category.Id)
             {
-                 var category = await _categoryRepository.GetByIdAsync(entity.CategoryId);
-                 if (category != null) entity.Category = category;
+                var category = await _categoryRepository.GetByIdAsync(entity.CategoryId);
+                if (category != null) entity.Category = category;
             }
 
             return ToDTO(entity);
@@ -200,11 +205,7 @@ namespace Fit3d.BLL.Services
         public async Task<bool> DeleteColorAsync(Guid colorId)
         {
             var color = await _colorRepository.GetByIdAsync(colorId);
-            if (color == null) return false;
-
-            // Hard delete for sub-resource usually, or soft delete if BaseEntity
-            // ProductColor is BaseEntity, so soft delete
-            if (color.IsDeleted) return false;
+            if (color == null || color.IsDeleted) return false;
 
             color.IsDeleted = true;
             color.UpdatedAt = DateTime.UtcNow;
@@ -241,9 +242,7 @@ namespace Fit3d.BLL.Services
         public async Task<bool> DeleteSizeAsync(Guid sizeId)
         {
             var size = await _sizeRepository.GetByIdAsync(sizeId);
-            if (size == null) return false;
-
-            if (size.IsDeleted) return false;
+            if (size == null || size.IsDeleted) return false;
 
             size.IsDeleted = true;
             size.UpdatedAt = DateTime.UtcNow;
@@ -264,6 +263,8 @@ namespace Fit3d.BLL.Services
                 SKU = entity.SKU,
                 Brand = entity.Brand,
                 ImageUrl = entity.ImageUrl,
+                PreviewModelPath = entity.PreviewModelPath,
+                ModelFilePath = entity.ModelFilePath,
                 StockQuantity = entity.StockQuantity,
                 IsActive = entity.IsActive,
                 IsFeatured = entity.IsFeatured,

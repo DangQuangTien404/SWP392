@@ -14,5 +14,6 @@ namespace Fit3d.BLL.Interfaces
         Task<OrderDTO> CreateAsync(CreateOrderDTO createDto);
         Task<OrderDTO?> UpdateAsync(Guid id, UpdateOrderDTO updateDto);
         Task<bool> DeleteAsync(Guid id);
+        Task<bool> HasUserPurchasedProductAsync(Guid userId, Guid productId);
     }
 }
