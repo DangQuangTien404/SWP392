@@ -6,13 +6,15 @@ namespace DTOs.Constants
         public const string DrawingMisaligned = "Drawing Misaligned";
         public const string MissingObject = "Missing Object";
         public const string Occluded = "Occluded";
+        public const string Other = "Other";
 
         public static readonly List<string> All = new()
         {
             IncorrectLabel,
             DrawingMisaligned,
             MissingObject,
-            Occluded
+            Occluded,
+            Other
         };
 
         public static bool IsValid(string category)
