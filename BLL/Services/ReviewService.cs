@@ -59,6 +59,11 @@ namespace BLL.Services
                 {
                     throw new Exception($"Invalid Error Category. Allowed values are: {string.Join(", ", ErrorCategories.All)}");
                 }
+
+                if (request.ErrorCategory == ErrorCategories.Other && string.IsNullOrWhiteSpace(request.Comment))
+                {
+                    throw new Exception("Comment is required when Error Category is 'Other'.");
+                }
             }
 
             var log = new ReviewLog
