@@ -1,4 +1,5 @@
 using BLL.Interfaces;
+using DTOs.Constants;
 using DTOs.Requests;
 using DTOs.Responses;
 using Microsoft.AspNetCore.Authorization;
@@ -68,6 +69,18 @@ namespace API.Controllers
             {
                 return BadRequest(new { Message = ex.Message });
             }
+        }
+
+        /// <summary>
+        /// Gets the list of available error categories.
+        /// </summary>
+        /// <returns>A list of error categories.</returns>
+        /// <response code="200">Returns list of error categories.</response>
+        [HttpGet("error-categories")]
+        [ProducesResponseType(typeof(IEnumerable<string>), 200)]
+        public IActionResult GetErrorCategories()
+        {
+            return Ok(ErrorCategories.All);
         }
     }
 }
