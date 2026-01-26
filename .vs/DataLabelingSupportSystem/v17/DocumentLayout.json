@@ -1,0 +1,160 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\test\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6EE40FE6-7887-4EBE-8D77-9DB73528F912}|DataLabelingSupportSystem.Tests\\DataLabelingSupportSystem.Tests.csproj|d:\\test\\datalabelingsupportsystem.tests\\taskservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EE40FE6-7887-4EBE-8D77-9DB73528F912}|DataLabelingSupportSystem.Tests\\DataLabelingSupportSystem.Tests.csproj|solutionrelative:datalabelingsupportsystem.tests\\taskservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EE40FE6-7887-4EBE-8D77-9DB73528F912}|DataLabelingSupportSystem.Tests\\DataLabelingSupportSystem.Tests.csproj|d:\\test\\datalabelingsupportsystem.tests\\taskintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EE40FE6-7887-4EBE-8D77-9DB73528F912}|DataLabelingSupportSystem.Tests\\DataLabelingSupportSystem.Tests.csproj|solutionrelative:datalabelingsupportsystem.tests\\taskintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EE40FE6-7887-4EBE-8D77-9DB73528F912}|DataLabelingSupportSystem.Tests\\DataLabelingSupportSystem.Tests.csproj|d:\\test\\datalabelingsupportsystem.tests\\projectservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EE40FE6-7887-4EBE-8D77-9DB73528F912}|DataLabelingSupportSystem.Tests\\DataLabelingSupportSystem.Tests.csproj|solutionrelative:datalabelingsupportsystem.tests\\projectservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EE40FE6-7887-4EBE-8D77-9DB73528F912}|DataLabelingSupportSystem.Tests\\DataLabelingSupportSystem.Tests.csproj|d:\\test\\datalabelingsupportsystem.tests\\projectintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EE40FE6-7887-4EBE-8D77-9DB73528F912}|DataLabelingSupportSystem.Tests\\DataLabelingSupportSystem.Tests.csproj|solutionrelative:datalabelingsupportsystem.tests\\projectintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EE40FE6-7887-4EBE-8D77-9DB73528F912}|DataLabelingSupportSystem.Tests\\DataLabelingSupportSystem.Tests.csproj|d:\\test\\datalabelingsupportsystem.tests\\customwebapplicationfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EE40FE6-7887-4EBE-8D77-9DB73528F912}|DataLabelingSupportSystem.Tests\\DataLabelingSupportSystem.Tests.csproj|solutionrelative:datalabelingsupportsystem.tests\\customwebapplicationfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EE40FE6-7887-4EBE-8D77-9DB73528F912}|DataLabelingSupportSystem.Tests\\DataLabelingSupportSystem.Tests.csproj|d:\\test\\datalabelingsupportsystem.tests\\baseintegrationtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EE40FE6-7887-4EBE-8D77-9DB73528F912}|DataLabelingSupportSystem.Tests\\DataLabelingSupportSystem.Tests.csproj|solutionrelative:datalabelingsupportsystem.tests\\baseintegrationtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EE40FE6-7887-4EBE-8D77-9DB73528F912}|DataLabelingSupportSystem.Tests\\DataLabelingSupportSystem.Tests.csproj|d:\\test\\datalabelingsupportsystem.tests\\authintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EE40FE6-7887-4EBE-8D77-9DB73528F912}|DataLabelingSupportSystem.Tests\\DataLabelingSupportSystem.Tests.csproj|solutionrelative:datalabelingsupportsystem.tests\\authintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D6D5C2B-6A49-44AF-BD35-85D6A0011124}|API\\API.csproj|d:\\test\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D6D5C2B-6A49-44AF-BD35-85D6A0011124}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TaskServiceTests.cs",
+              "DocumentMoniker": "D:\\test\\DataLabelingSupportSystem.Tests\\TaskServiceTests.cs",
+              "RelativeDocumentMoniker": "DataLabelingSupportSystem.Tests\\TaskServiceTests.cs",
+              "ToolTip": "D:\\test\\DataLabelingSupportSystem.Tests\\TaskServiceTests.cs",
+              "RelativeToolTip": "DataLabelingSupportSystem.Tests\\TaskServiceTests.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T04:46:52.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TaskIntegrationTests.cs",
+              "DocumentMoniker": "D:\\test\\DataLabelingSupportSystem.Tests\\TaskIntegrationTests.cs",
+              "RelativeDocumentMoniker": "DataLabelingSupportSystem.Tests\\TaskIntegrationTests.cs",
+              "ToolTip": "D:\\test\\DataLabelingSupportSystem.Tests\\TaskIntegrationTests.cs",
+              "RelativeToolTip": "DataLabelingSupportSystem.Tests\\TaskIntegrationTests.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAiwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T04:46:46.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProjectServiceTests.cs",
+              "DocumentMoniker": "D:\\test\\DataLabelingSupportSystem.Tests\\ProjectServiceTests.cs",
+              "RelativeDocumentMoniker": "DataLabelingSupportSystem.Tests\\ProjectServiceTests.cs",
+              "ToolTip": "D:\\test\\DataLabelingSupportSystem.Tests\\ProjectServiceTests.cs",
+              "RelativeToolTip": "DataLabelingSupportSystem.Tests\\ProjectServiceTests.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T04:46:42.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProjectIntegrationTests.cs",
+              "DocumentMoniker": "D:\\test\\DataLabelingSupportSystem.Tests\\ProjectIntegrationTests.cs",
+              "RelativeDocumentMoniker": "DataLabelingSupportSystem.Tests\\ProjectIntegrationTests.cs",
+              "ToolTip": "D:\\test\\DataLabelingSupportSystem.Tests\\ProjectIntegrationTests.cs",
+              "RelativeToolTip": "DataLabelingSupportSystem.Tests\\ProjectIntegrationTests.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T04:46:33.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomWebApplicationFactory.cs",
+              "DocumentMoniker": "D:\\test\\DataLabelingSupportSystem.Tests\\CustomWebApplicationFactory.cs",
+              "RelativeDocumentMoniker": "DataLabelingSupportSystem.Tests\\CustomWebApplicationFactory.cs",
+              "ToolTip": "D:\\test\\DataLabelingSupportSystem.Tests\\CustomWebApplicationFactory.cs",
+              "RelativeToolTip": "DataLabelingSupportSystem.Tests\\CustomWebApplicationFactory.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T04:46:30.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BaseIntegrationTest.cs",
+              "DocumentMoniker": "D:\\test\\DataLabelingSupportSystem.Tests\\BaseIntegrationTest.cs",
+              "RelativeDocumentMoniker": "DataLabelingSupportSystem.Tests\\BaseIntegrationTest.cs",
+              "ToolTip": "D:\\test\\DataLabelingSupportSystem.Tests\\BaseIntegrationTest.cs",
+              "RelativeToolTip": "DataLabelingSupportSystem.Tests\\BaseIntegrationTest.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T04:46:23.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthIntegrationTests.cs",
+              "DocumentMoniker": "D:\\test\\DataLabelingSupportSystem.Tests\\AuthIntegrationTests.cs",
+              "RelativeDocumentMoniker": "DataLabelingSupportSystem.Tests\\AuthIntegrationTests.cs",
+              "ToolTip": "D:\\test\\DataLabelingSupportSystem.Tests\\AuthIntegrationTests.cs",
+              "RelativeToolTip": "DataLabelingSupportSystem.Tests\\AuthIntegrationTests.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T04:46:18.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\test\\API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\Program.cs",
+              "ToolTip": "D:\\test\\API\\Program.cs",
+              "RelativeToolTip": "API\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T04:45:33.391Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
