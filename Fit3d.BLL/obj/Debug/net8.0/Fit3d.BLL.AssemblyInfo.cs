@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Fit3d.BLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c1e6f6c7091bf3745cdf643fbdabfe61a1d0d74")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b85d12bab5751c7a388a3bae933165461fe8b4a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Fit3d.BLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Fit3d.BLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

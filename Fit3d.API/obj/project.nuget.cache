@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "41Fa9PYL+jc=",
+  "dgSpecHash": "nBcYtfw9ESY=",
   "success": true,
   "projectFilePath": "D:\\EXE201\\EXE201_Fit3DBE\\Fit3DBE\\Fit3d.API\\Fit3d.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dangq\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\dangq\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\dangq\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\dangq\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\dangq\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.0\\microsoft.aspnetcore.openapi.8.0.0.nupkg.sha512",
     "C:\\Users\\dangq\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

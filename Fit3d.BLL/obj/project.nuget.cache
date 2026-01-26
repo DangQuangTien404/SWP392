@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "JMj50vrmIxE=",
+  "dgSpecHash": "vSKbl8+z3qg=",
   "success": true,
   "projectFilePath": "D:\\EXE201\\EXE201_Fit3DBE\\Fit3DBE\\Fit3d.BLL\\Fit3d.BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dangq\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\dangq\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\dangq\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\dangq\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\dangq\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\dangq\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -29,6 +29,12 @@ namespace FIt3d.DAL.Entities
 
         [MaxLength(500)]
         public string? ImageUrl { get; set; }
+
+        [MaxLength(500)]
+        public string? ModelFilePath { get; set; }
+
+        [MaxLength(500)]
+        public string? PreviewModelPath { get; set; }
 
         public int StockQuantity { get; set; } = 0;
 

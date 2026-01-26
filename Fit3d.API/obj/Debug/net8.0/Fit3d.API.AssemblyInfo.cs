@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Fit3d.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c1e6f6c7091bf3745cdf643fbdabfe61a1d0d74")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96e4b3e78503321b67619234a82d0bd066a67ced")]
 [assembly: System.Reflection.AssemblyProductAttribute("Fit3d.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Fit3d.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
